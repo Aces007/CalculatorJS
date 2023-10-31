@@ -1,0 +1,270 @@
+/* Initial Settings */
+:root{
+    --main_bg: #0866ff;
+    --scrll_track: #0753ff;
+    --scrll_thumb: #0731ff;
+    --univ_header-hover: #0422b2;
+    --outline: #0530fe;
+    --header: #28a8d2;
+    --panel: #0742ff;
+}
+
+html,
+body{
+    width: 100%;
+    height: 100%;
+    background: var(--main_bg);
+    margin: 0;
+    overflow: hidden;
+    font-size: 7px;
+    position: relative;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar{
+    height: 0.5rem;
+    padding: 0.3rem;
+}
+
+::-webkit-scrollbar-track{
+    background: var(--scrll_track);
+    border-radius: 3.5rem;
+    padding: 0.3rem;
+    box-shadow: inset 0 0 0.5rem;
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--scrll_thumb);
+    outline: 1px solid var(--outline);
+    border-radius: 3rem;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: var(--scrll_hover);
+}
+
+
+
+/* Header */ 
+header{
+    height: 3%;
+    background: var(--univ_header-hover);
+    text-align: center;
+    vertical-align: middle;
+    padding: 1rem;
+    box-shadow: 0 0.2rem 0.6rem 0 var(--univ_header-hover);
+}
+
+#title_contain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#title_contain h2{
+    width: 40%;
+    margin: 0;
+    font-size: 3rem;
+    color: var(--header);
+    text-shadow: 0.1rem 0.2rem 0.7rem var(--univ_header-hover);
+}
+
+
+/* Main Content */
+main{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: center;
+}
+
+#main_contain{
+    width: 25rem;
+    height: auto;
+    background: var(--univ_header-hover);
+    padding: 1rem;
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0rem 0.5rem 0.6rem 0 blue;
+}
+
+#calcu_contain{
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+
+#rsult_contain{
+    width: 100%;
+    height: 6rem;
+    background-color: var(--panel);
+    box-shadow: 0.1rem 0.1rem 0.6rem 0 black inset;
+    margin-bottom: 0.8rem;
+}
+
+#rsult_txt{
+    font-size: 5rem;
+    height: 5.5rem;
+    text-align: end;
+    margin: 1rem;
+    color: #bbbbbb;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#table_contain{
+    position: relative;
+    height: auto;
+    width: 100%;
+}
+
+table,
+th,
+td {
+    border-radius: 1rem;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    height: auto;
+    margin: 0;
+    font-family: "Supermercado One";
+    border-spacing: 1rem;
+    column-width: 3rem;
+}
+
+/* Classes */
+.key:hover {
+    background-color: var(--main_bg);
+}
+
+.operator:hover {
+    background-color: var(--outline);
+}
+
+.btns {
+    background-color: var(--scrll_thumb);
+    color: white;
+    font-size: 3.5rem;
+}
+
+.btns:hover {
+    background-color: #2d5d69;
+}
+
+#equals {
+    background-color: blue;
+    color: white;
+}
+
+#equals:hover {
+    background-color: var(--univ_header-hover);
+}
+
+td {
+    font-size: 3.5rem;
+    color: black;
+    background-color: #969696;
+    box-shadow: 0rem 0.2rem 0.4rem 0 black;
+    padding: 0;
+    white-space: nowrap;
+}
+
+td img {
+    height: auto;
+    width: 2.5rem;
+    display: block;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.operator {
+    background-color: var(--header);
+    color: white;
+    font-size: 3.5rem;
+}
+
+
+
+
+
+/* Responsiveness */
+@media screen and (max-height:350px) {
+    html,
+    body {
+        font-size: 5px;
+    }
+    header {
+        height: 4%;
+        padding: 0.5rem;
+    }
+    #title-cont img {
+        width: 2rem;
+    }
+    #title-cont h2 {
+        width: 32%;
+    }
+    #main-cont {
+        top: 40%;
+    }
+    footer {
+        height: 1%;
+    }
+}
+
+@media screen and (min-height: 450px) {
+    html,
+    body {
+        font-size: 8px;
+    }
+    header {
+        height: 4%;
+        padding: 0.5rem;
+    }
+    #title-cont img {
+        width: 1.5rem;
+    }
+    #main-cont {
+        top: 41%;
+    }
+    footer {
+        height: 2%;
+    }
+    #title-cont h2 {
+        width: 35%;
+    }
+}
+
+@media screen and (min-height: 650px) {
+    html,
+    body {
+        font-size: 10px;
+    }
+    header {
+        height: 5%;
+    }
+    #title-cont h2 {
+        width: 28%;
+    }
+    footer {
+        height: 4%;
+    }
+    #main-cont {
+        width: 28rem;
+    }
+}
+
+@media screen and (min-height: 850px) {
+    html,
+    body {
+        font-size: 12px;
+    }
+    footer {
+        height: 4%;
+    }
+}

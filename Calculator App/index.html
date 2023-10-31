@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculator App</title>
+    <link rel="icon" type="image/x-icon" href="src/icons/calcu_icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Supermercado+One"/>
+</head>
+
+<body>
+    <!-- Header Container -->
+    <header>
+        <div id="title-contain">
+            <h2>JavaScript Calculator</h2>
+        </div>
+    </header> 
+    
+    <!-- Main Part-->
+    <main>
+        <div id="main_contain">
+        
+            <!-- Upper Region -->
+            <div id="calcu_contain">
+                <div id="rsult_contain">
+                    <h2 id="rsult_txt"></h2>
+                </div>
+        
+                <!-- Buttons -->
+                <div id="table_contain">
+                    <table>
+                        <!-- 1st Set -->
+                        <tr>
+                            <td id="clear" class="btn" alt="clear">C</td>
+                            <td class="operator">÷</td>
+                            <td class="operator">-</td>
+                            <td id="backspace" class="btn" alt="backspace">
+                                <img src="src/symbols/back.png" alt="back">
+                            </td>
+                        </tr>
+        
+                        <!-- 2nd Set -->
+                        <tr>
+                            <td class="key">7</td>
+                            <td class="key">8</td>
+                            <td class="key">9</td>
+                            <td class="operator">x</td>
+                        </tr>
+        
+                        <!-- 3rd Set -->
+                        <tr>
+                            <td class="key">4</td>
+                            <td class="key">5</td>
+                            <td class="key">6</td>
+                            <td class="operator">+</td>
+                        </tr>
+        
+                        <!-- 4th Set -->
+                        <tr>
+                            <td class="key">1</td>
+                            <td class="key">2</td>
+                            <td class="key">3</td>
+                            <td id="equal">=</td>
+                        </tr>
+        
+                        <!-- 5th Set -->
+                        <tr>
+                            <td class="btn">M+</td>
+                            <td class="btn">M-</td>
+                            <td class="btn">Bin</td>
+                            <td class="btn">•</td>
+                        </tr>
+                    </table>
+        
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
