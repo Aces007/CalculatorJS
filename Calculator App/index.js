@@ -142,6 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
       memory = 0;
     });
   
+  
     // Function to perform basic operations
     function operate(a, b, op) {
       a = parseFloat(a);

@@ -1,6 +1,6 @@
 /* Initial Settings */
 :root{
-    --main-bg: #003129;
+    --main-bg: #80661b;
     --calc-panel: #333333;
     --text: white;
     --hover: #708090;
@@ -18,6 +18,7 @@ body{
     overflow: hidden;
     font-size: 7px;
     position: relative;
+    font-family: 'Nunito', sans-serif;
 }
 
 /* Scrollbar */
@@ -134,9 +135,7 @@ table {
     text-align: center;
     height: auto;
     margin: 0;
-    font-family: "Supermercado One";
-    border-spacing: 1rem;
-    column-width: 3rem;
+    border-spacing: 0.5rem; /* Adjust this spacing as needed */
 }
 
 /* Classes */
@@ -158,6 +157,12 @@ table {
     background-color: var(--hover);
 }
 
+.digit, .operator {
+    transition: background-color 0.2s, transform 0.2s;
+    box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+}
+
+
 #equals {
     background-color: var(--text);
     color: var(--text);
@@ -168,7 +173,8 @@ table {
 }
 
 td {
-    font-size: 3.5rem;
+    width: 20%; /* Set the desired width for each button column */
+    font-size: 3rem;
     color: var(--text);
     background-color: var(--operators);
     box-shadow: 0rem 0.2rem 0.4rem 0 black;
@@ -184,7 +190,13 @@ td img {
     margin: 0 auto;
 }
 
-
+.empty-label {
+    background: var(--calc-panel);
+    text-align: center;
+    font-size: 1.7rem; /* Adjust the font size as needed */
+    border-radius: 5px;
+    color: var(--text);
+}
 
 
 /* Responsiveness */

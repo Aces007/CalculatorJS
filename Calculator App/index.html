@@ -5,14 +5,14 @@
     <link rel="icon" type="image/x-icon" href="src/icons/calcu_icon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Supermercado+One"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"/>
 </head>
 
 <body>
     <!-- Header Container -->
     <header>
         <div id="title-contain">
-            <h2>Simple Calculator</h2>
+            <h2>JS Calculator by Ace Clavano</h2>
         </div>
     </header> 
     
@@ -32,9 +32,10 @@
                         <!-- 1st Set -->
                         <tr>
                             <td class="operator" id="clear">C</td>
-                            <td class="operator" id="divide">÷</td>
-                            <td class="operator" id="subtract">-</td>
-                            <td class="operator" id="backspace" colspan="2">
+                            <td class="operator" id="m-plus">M+</td>
+                            <td class="operator" id="m-minus">M-</td>
+                            <td class="operator" id="binary">Bin</td>
+                            <td class="operator" id="backspace">
                                 <img src="src/symbols/back.png" alt="back">
                             </td>
                         </tr>
@@ -44,7 +45,8 @@
                             <td class="digit" id="seven">7</td>
                             <td class="digit" id="eight">8</td>
                             <td class="digit" id="nine">9</td>
-                            <td class="operator" id="multiply" colspan="2">x</td>
+                            <td class="operator" id="subtract">-</td>
+                            <td class="operator" id="multiply">x</td>
                         </tr>
         
                         <!-- 3rd Set -->
@@ -52,24 +54,25 @@
                             <td class="digit" id="four">4</td>
                             <td class="digit" id="five">5</td>
                             <td class="digit" id="six">6</td>
-                            <td class="operator" id="add" colspan="2">+</td>
+                            <td class="operator" id="add">+</td>
+                            <td class="operator" id="divide">÷</td>
                         </tr>
         
                         <!-- 4th Set -->
                         <tr>
+                            <td class="digit" id="zero">0</td>
                             <td class="digit" id="one">1</td>
                             <td class="digit" id="two">2</td>
                             <td class="digit" id="three">3</td>
-                            <td class="operator" id="equal" colspan="2">=</td>
+                            <td class="operator" id="equal">=</td>
                         </tr>
         
                         <!-- 5th Set -->
                         <tr>
-                            <td class="operator" id="m-plus">M+</td>
-                            <td class="operator" id="m-minus">M-</td>
-                            <td class="operator" id="m-rec">MR</td>
-                            <td class="operator" id="binary">Bin</td>
                             <td class="digit" id="decimal">.</td>
+                            <td class="operator" id="m-rec">MR</td>
+                            <td class="operator" id="m-clear">MC</td>
+                            <td class="empty-label" colspan="2">Simple Calculator</td>
                         </tr>
                     </table>
                 </div>
