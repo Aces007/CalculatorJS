@@ -1,4 +1,5 @@
 /* Initial Settings */
+/* Main Color Palette Used */
 :root{
     --calc-panel: #333333;
     --text: white;
@@ -19,7 +20,7 @@ body{
     font-family: 'Nunito', sans-serif;
 }
 
-
+/* Dynamic Background Settings */
 body{
     height:100vh;
     margin: 0;
@@ -35,7 +36,8 @@ body{
     background-blend-mode: overlay, overlay, difference, difference, difference, normal;
   }
 
-/* Scrollbar */
+
+/* Scrollbar Settings */
 ::-webkit-scrollbar{
     height: 0.5rem;
     padding: 0.3rem;
@@ -59,10 +61,9 @@ body{
 }
 
 
-
 /* Header */ 
 header{
-    height: 3%;
+    height: 100%;
     background: var(--main-bg);
     text-align: center;
     vertical-align: middle;
@@ -128,10 +129,10 @@ main{
 #rsult_txt {
     height: 5rem;
     color: var(--text);
-    direction: rtl;
+    direction: ltr;
 }
 
-
+/* Button Grid */
 #table_contain{
     position: relative;
     height: auto;
@@ -152,7 +153,7 @@ table {
     border-spacing: 0.5rem; /* Adjust this spacing as needed */
 }
 
-/* Classes */
+/* Button Classes */
 .digit:hover {
     background-color: var(--hover);
 }
@@ -187,7 +188,7 @@ table {
 }
 
 td {
-    width: 20%; /* Set the desired width for each button column */
+    width: 20%; 
     font-size: 3rem;
     color: var(--text);
     background-color: var(--operators);
@@ -207,7 +208,7 @@ td img {
 .empty-label {
     background: var(--calc-panel);
     text-align: center;
-    font-size: 1.7rem; /* Adjust the font size as needed */
+    font-size: 1.8rem;
     border-radius: 5px;
     color: var(--text);
 }
@@ -217,11 +218,12 @@ td img {
 @media screen and (max-height:350px) {
     html,
     body {
-        font-size: 5px;
+        font-size: 4px;
     }
     header {
-        height: 4%;
+        height: 20%;
         padding: 0.5rem;
+        width: 100%;
     }
     #title-cont img {
         width: 2rem;
@@ -232,18 +234,15 @@ td img {
     #main-cont {
         top: 40%;
     }
-    footer {
-        height: 1%;
-    }
 }
 
 @media screen and (min-height: 450px) {
     html,
     body {
-        font-size: 8px;
+        font-size: 5.5px;
     }
     header {
-        height: 4%;
+        height: 30%;
         padding: 0.5rem;
     }
     #title-cont img {
@@ -251,9 +250,6 @@ td img {
     }
     #main-cont {
         top: 41%;
-    }
-    footer {
-        height: 2%;
     }
     #title-cont h2 {
         width: 35%;
@@ -266,13 +262,10 @@ td img {
         font-size: 10px;
     }
     header {
-        height: 5%;
+        height: 10%;
     }
     #title-cont h2 {
-        width: 28%;
-    }
-    footer {
-        height: 4%;
+        width: 80%;
     }
     #main-cont {
         width: 28rem;
@@ -282,9 +275,6 @@ td img {
 @media screen and (min-height: 850px) {
     html,
     body {
-        font-size: 12px;
-    }
-    footer {
-        height: 4%;
+        font-size: 10px;
     }
 }

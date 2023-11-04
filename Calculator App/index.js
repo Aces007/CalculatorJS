@@ -8,45 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let showBinary = false; // Flag to indicate binary mode
   
     const display = document.getElementById("rsult_txt");
-  
 
-
-    // Function to update the display and use exponential notation for more than 12 digits
-    function updateDisplay() {
-      if (displayValue.length > 12) {
-        displayValue = parseFloat(displayValue).toExponential(10); // Convert to scientific notation with 6 digits
-      }
-      display.textContent = displayValue;
-      adjustFontSize(); // Call a function to adjust the font size
-    }
-
-    // Function to adjust font size dynamically
-    function adjustFontSize() {
-      const displayContainer = document.getElementById("rsult_contain");
-      const displayText = document.getElementById("rsult_txt");
-      const maxWidth = displayContainer.clientWidth;
-      let fontSize = 5; // Starting font size (you can adjust this value)
-
-      displayText.style.fontSize = fontSize + 'rem';
-
-      while (displayText.scrollWidth > maxWidth && fontSize > 1) {
-        fontSize -= 0.1;
-        displayText.style.fontSize = fontSize + 'rem';
-      }
-    }
-
-
-    // Function to clear the calculator
-    function clearCalculator() {
-      displayValue = "";
-      operator = "";
-      firstOperand = "";
-      secondOperand = "";
-      pendingOperation = false;
-      updateDisplay();
-    }
-
-    // Handle digit buttons, including the decimal point
+    // Handle digit buttons (0-9), including the decimal point
     document.querySelectorAll(".digit").forEach((button) => {
       button.addEventListener("click", () => {
         if (pendingOperation) {
@@ -56,8 +19,9 @@ document.addEventListener("DOMContentLoaded", function () {
         if (displayValue.length < 12) {
           if (displayValue !== "0" || button.textContent !== "0") {
             // Check if a decimal point already exists in the number
+            // Do not add more than one decimal point
             if (button.textContent === "." && displayValue.includes(".")) {
-              return; // Do not add more than one decimal point
+              return; 
             }
             displayValue += button.textContent;
           }
@@ -150,8 +114,45 @@ document.addEventListener("DOMContentLoaded", function () {
       el.style.setProperty('--posX',  x-l-w/2);
       el.style.setProperty('--posY',  y-t-h/2);
     })
+
+
+    // This are all the functions used...
   
-  
+    // Function to update the display and use exponential notation for more than 12 digits
+    function updateDisplay() {
+      if (displayValue.length > 12) {
+        displayValue = parseFloat(displayValue).toExponential(10); 
+      }
+      display.textContent = displayValue;
+      adjustFontSize(); // Function to adjust the font size
+    }
+
+    // Function to adjust font size dynamically
+    function adjustFontSize() {
+      const displayContainer = document.getElementById("rsult_contain");
+      const displayText = document.getElementById("rsult_txt");
+      const maxWidth = displayContainer.clientWidth;
+      let fontSize = 3; 
+
+      displayText.style.fontSize = fontSize + 'rem';
+
+      while (displayText.scrollWidth > maxWidth && fontSize > 1) {
+        fontSize -= 0.1;
+        displayText.style.fontSize = fontSize + 'rem';
+      }
+    }
+
+
+    // Function to clear the calculator
+    function clearCalculator() {
+      displayValue = "";
+      operator = "";
+      firstOperand = "";
+      secondOperand = "";
+      pendingOperation = false;
+      updateDisplay();
+    }
+
     // Function to perform basic operations
     function operate(a, b, op) {
       a = parseFloat(a);
@@ -172,4 +173,3 @@ document.addEventListener("DOMContentLoaded", function () {
   
     updateDisplay();
   });
-  
